@@ -1,6 +1,6 @@
 import { network, ethers } from "hardhat"
 import { moveBlocks } from "../utils/move-blocks"
-import { XchaingeToken } from "../typechain-types"
+import { DolxToken } from "../typechain-types"
 import { storeNFT } from "../utils/uploadToNFTstorage"
 
 import xchaingeAddressMumbai from "../broadcast/Dolx.s.sol/80001/run-latest.json"
@@ -23,8 +23,8 @@ async function mint() {
 
   const xchaingeTokenAddress =
     xchaingeTokenAddressMumbai["transactions"][0]["contractAddress"]
-  const xchaingeToken: XchaingeToken = await ethers.getContractAt(
-    "XchaingeToken",
+  const xchaingeToken: DolxToken = await ethers.getContractAt(
+    "DolxToken",
     xchaingeTokenAddress
   )
 

@@ -26,9 +26,9 @@ async function mintAndList() {
   const xchaingeTokenAddress =
     xchaingeTokenAddressMumbai["transactions"][0]["contractAddress"]
 
-  const xchainge: Dolx = await ethers.getContractAt("Xchainge", xchaingeAddress)
+  const xchainge: Dolx = await ethers.getContractAt("Dolx", xchaingeAddress)
   const xchaingeToken: DolxToken = await ethers.getContractAt(
-    "XchaingeToken",
+    "DolxToken",
     xchaingeTokenAddress
   )
 
